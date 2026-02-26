@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LMS • Quiz</title>
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  <header class="top">
+    <a class="back" href="index.html">← Back</a>
+    <h1>Course Quiz</h1>
+    <p class="sub">Attempt the quiz and see your score</p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="row">
+        <div>
+          <div class="label">Quiz</div>
+          <div id="quizTitle" class="title">HTML Basics Quiz</div>
+        </div>
+        <div class="meta">
+          <span id="timer" class="pill">10:00</span>
+          <span id="qCount" class="pill">0 Questions</span>
+        </div>
+      </div>
+
+      <div id="quizArea" class="quizArea">
+        <!-- Questions render here -->
+      </div>
+
+      <div class="actions">
+        <button id="prevBtn" class="btn ghost" type="button">Previous</button>
+        <button id="nextBtn" class="btn primary" type="button">Next</button>
+        <button id="submitBtn" class="btn success hidden" type="button">Submit</button>
+      </div>
+    </section>
+
+    <section id="resultCard" class="card hidden">
+      <h2>Result</h2>
+      <p id="resultText" class="resultText"></p>
+      <div class="actions">
+        <button id="retryBtn" class="btn ghost" type="button">Retry</button>
+        <a class="btn primary" href="courses.html">Back to Courses</a>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
