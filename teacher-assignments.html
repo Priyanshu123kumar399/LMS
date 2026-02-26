@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Teacher • Assignments</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body { background:#f5f7fb; }
+    .cardx { background:#fff; border-radius:18px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+  </style>
+</head>
+<body class="p-4">
+  <div class="container">
+    <div class="cardx p-4 mb-4">
+      <h2 class="mb-3">Create Assignment</h2>
+
+      <div class="row g-2">
+        <div class="col-md-3">
+          <input id="courseId" class="form-control" placeholder="courseId e.g. english">
+        </div>
+        <div class="col-md-4">
+          <input id="title" class="form-control" placeholder="Title">
+        </div>
+        <div class="col-md-2">
+          <input id="due" class="form-control" placeholder="Due (e.g. Friday)">
+        </div>
+        <div class="col-md-12">
+          <textarea id="question" class="form-control" placeholder="Question"></textarea>
+        </div>
+        <div class="col-md-12">
+          <button id="createBtn" class="btn btn-primary">Create</button>
+          <span id="createStatus" class="ms-2"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardx p-4">
+      <h2 class="mb-3">Submissions & Grading</h2>
+
+      <div class="row g-2 mb-3">
+        <div class="col-md-3">
+          <input id="filterCourse" class="form-control" placeholder="Filter courseId (optional)">
+        </div>
+        <div class="col-md-3">
+          <input id="filterStudent" class="form-control" placeholder="Filter student email (optional)">
+        </div>
+        <div class="col-md-2">
+          <button id="loadBtn" class="btn btn-outline-primary w-100">Load</button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>Assignment</th>
+              <th>Course</th>
+              <th>Student</th>
+              <th>File</th>
+              <th>Submitted</th>
+              <th>Marks</th>
+              <th class="text-end">Grade</th>
+            </tr>
+          </thead>
+          <tbody id="subsRows"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
