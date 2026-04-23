@@ -1,0 +1,17 @@
+[
+  {
+    "id": "quiz-seed-1",
+    "course": "Advanced English Communication",
+    "title": "Grammar Basics",
+    "question": "Which sentence is grammatically correct?",
+    "options": [
+      "She do not like tea.",
+      "She does not like tea.",
+      "She does not likes tea."
+    ],
+    "answer": "She does not like tea.",
+    "status": "Pending",
+    "createdAt": "2026-04-23T00:00:00.000Z",
+    "publishedBy": "teacher@gmail.com"
+  }
+]

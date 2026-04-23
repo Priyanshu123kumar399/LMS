@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const submitBtn = document.getElementById("submitBtn");
+  
+  // Get course from URL parameter for storage key
+  const params = new URLSearchParams(window.location.search);
+  const courseName = params.get('course') || 'default';
 
   submitBtn.addEventListener("click", function () {
 
@@ -11,23 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    localStorage.setItem("assignment_status", "Pending");
+    localStorage.setItem(`course_assignment_${courseName}_status`, "Pending");
 
-    document.getElementById("submitStatus").innerText = "Submitted Successfully âœ…";
+    document.getElementById("submitStatus").innerText = "Submitted Successfully ✅";
 
     document.getElementById("afterOptions").style.display = "block";
   });
 
 });
 
-// Back
+// Back to course page
 function goBack() {
-  window.location.href = "index.html";
+  window.history.back();
 }
 
 // Check Status
 function checkStatus() {
-  const status = localStorage.getItem("assignment_status") || "Not Submitted";
+  const params = new URLSearchParams(window.location.search);
+  const courseName = params.get('course') || 'default';
+  const status = localStorage.getItem(`course_assignment_${courseName}_status`) || "Not Submitted";
   document.getElementById("statusText").innerText = "Status: " + status;
 }
 
@@ -37,3 +43,4 @@ function uploadAgain() {
   document.getElementById("submitStatus").innerText = "";
   document.getElementById("statusText").innerText = "";
 }
+

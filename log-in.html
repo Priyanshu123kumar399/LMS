@@ -76,16 +76,24 @@
           <div class="row justify-content-center">
             <div class="col-md-7 col-lg-6 col-xl-5">
               <div class="login-form box">
-                <h2 class="form-title text-center">Log In to Your Account</h2>
-                <form action="">
+                <h2 class="form-title text-center">Login</h2>
+                <form id="loginForm" novalidate>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Email">
+                    <input id="loginEmail" type="email" class="form-control" placeholder="Email" autocomplete="email" required>
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input id="loginPassword" type="password" class="form-control" placeholder="Password" autocomplete="current-password" required>
                     <div class="d-flex mb-2 justify-content-end"><a href="#">Forget Password</a></div>
                   </div>
-                  <button type="submit" class="btn btn-theme btn-block btn-form"  ><a href="https://engrshuvodas.github.io/LMS_Dashboard/index.html"> Log in </a></button>
+                  <div class="form-group">
+                    <label class="form-label d-block mb-2">Role</label>
+                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                      <label><input type="radio" name="loginRole" value="student" checked> Student</label>
+                      <label><input type="radio" name="loginRole" value="teacher"> Teacher</label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-theme btn-block btn-form">Login</button>
+                  <div id="loginMessage" class="alert mt-3 d-none" role="alert"></div>
                   <p class="text-center mt-4 mb-0">Don't have an account ? <a href="./sign-up.html">Sign Up</a></p>
                 </form>
               </div>
@@ -229,6 +237,6 @@
 
 
 <script src="js/bootstrap.bundle.min.js"></script>  
-<script src="js/main.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

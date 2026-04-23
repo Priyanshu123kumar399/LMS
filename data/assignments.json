@@ -1,0 +1,31 @@
+{
+  "assignments": [
+    {
+      "id": "assignment-seed-1",
+      "course": "Advanced English Communication",
+      "title": "Formal Email Writing",
+      "dueDate": "2026-04-30",
+      "instructions": "Write a professional email requesting internship information.",
+      "status": "Pending",
+      "createdAt": "2026-04-23T00:00:00.000Z",
+      "publishedBy": "teacher@gmail.com"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "submission-seed-1",
+      "assignmentId": "assignment-seed-1",
+      "assignmentTitle": "Formal Email Writing",
+      "course": "Advanced English Communication",
+      "studentId": "student-seed-1",
+      "studentName": "Admin User",
+      "studentEmail": "admin@gmail.com",
+      "submittedAt": "2026-04-23T00:00:00.000Z",
+      "status": "Graded",
+      "fileName": "formal-email-draft.pdf",
+      "answerText": "Please find my professional email draft attached.",
+      "marks": 18,
+      "feedback": "Clear structure and good tone. Improve the subject line."
+    }
+  ]
+}
